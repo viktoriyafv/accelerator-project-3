@@ -1,4 +1,8 @@
-// Vendor
-// ---------------------------------
-
+/* Vendor */
 @import "vendor/normalize";
+
+/* COMMON */
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/fonts";
+@import "./common/global";
