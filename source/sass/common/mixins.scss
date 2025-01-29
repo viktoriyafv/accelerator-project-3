@@ -23,3 +23,41 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin reset-title {
+  display: block;
+  margin: 0;
+}
+
+@mixin button-mobile {
+font-family: $primary-font;
+font-size: 12px;
+font-weight: 500;
+line-height: 12px;
+letter-spacing: 0.02em;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+
+@mixin button-tablet {
+font-family: Manrope;
+font-size: 14px;
+font-weight: 500;
+line-height: 14px;
+letter-spacing: 0.02em;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+
+@mixin button-desktop {
+font-family: Manrope;
+font-size: 14px;
+font-weight: 500;
+line-height: 14px;
+letter-spacing: 0.02em;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
