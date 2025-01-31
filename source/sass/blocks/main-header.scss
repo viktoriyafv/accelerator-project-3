@@ -1,0 +1,363 @@
+.main-header__wrapper {
+  width: 320px;
+  min-height: 54px;
+  margin: 0 auto;
+  padding: 20px 15px 0;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 4;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 30px 45px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 30px 100px 0;
+  }
+}
+
+.main-header__logo-wrapper {
+  position: absolute;
+  display: flex;
+  width: 52px;
+  height: 54px;
+  align-items: center;
+}
+
+.main-header__logo {
+  width: 52px;
+  height: 52px;
+  z-index: 2;
+}
+
+.main-header__toggle {
+  @include button-tablet;
+
+  display: block;
+  position: relative;
+  right: 0;
+  min-width: 136px;
+  min-height: 54px;
+  padding: 19px 0 19px 19px;
+  border-radius: 30px;
+  background-color: $white-color;
+  border: 1px solid $accent-color;
+  text-align: left;
+  text-transform: uppercase;
+  color: $accent-color;
+  z-index: 4;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 0 20px 20px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 4px;
+    right: 4px;
+    width: 46px;
+    height: 46px;
+    background-color: $accent-color;
+    border-radius: 50px;
+
+    @media (width >= 768px) {
+      top: 5px;
+      right: 5px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 4px;
+    right: 4px;
+    width: 46px;
+    height: 46px;
+    mask-image: url("../../__spritemap#sprite-menu-view");
+    mask-position: 50% 50%;
+    mask-size: 20px 20px;
+    mask-repeat: no-repeat;
+    background-color: $white-color;
+    z-index: 4;
+
+    @media (width >= 768px) {
+      top: 5px;
+      right: 5px;
+    }
+  }
+
+  &:disabled {
+    border: 1px solid $disabled-button;
+    color: $disabled-button;
+    cursor: not-allowed;
+
+    &::after {
+      background-color: $disabled-button;
+    }
+  }
+
+  &:active {
+    width: 290px;
+    right: 20px;
+    background-color: $accent-color;
+    color: $white-color;
+
+    @media (width >= 768px) {
+      width: 286px;
+    }
+  }
+
+  &:hover {
+    background-color: $accent-color;
+    color: $white-color;
+
+    &::after {
+      background-color: $white-color;
+    }
+
+    &::before {
+      background-color: $accent-color;
+    }
+  }
+
+  &:focus {
+    background-color: inherit;
+    color: $accent-color;
+
+    &::after {
+      background-color: $accent-color;
+    }
+
+    &::before {
+      background-color: $white-color;
+    }
+  }
+}
+
+.main-header__nav {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.main-header__menu--opened .main-header__toggle {
+  width: 290px;
+  right: 20px;
+  background-color: $accent-color;
+  color: $white-color;
+
+  @media (width >= 768px) {
+    width: 286px;
+  }
+
+  &::after {
+    background-color: $white-color;
+  }
+
+  &::before {
+    mask-image: url("../../__spritemap#sprite-cross-view");
+    mask-size: 20px 20px;
+    background-color: $accent-color;
+  }
+
+  &:hover {
+    background-color: $accent-color;
+    color: $white-color;
+
+    &::after {
+      background-color: $white-color;
+    }
+
+    &::before {
+      background-color: $accent-color;
+    }
+  }
+
+  &:focus {
+    background-color: $white-color;
+    color: $accent-color;
+
+    &::after {
+      background-color: $accent-color;
+    }
+
+    &::before {
+      background-color: $white-color;
+    }
+  }
+}
+
+.main-header__menu {
+  position: absolute;
+  min-height: 54px;
+  right: -5px;
+
+  @media (min-width: $tablet-width) {
+    right: 25px;
+  }
+
+  &--opened {
+    height: auto;
+  }
+}
+
+.main-header__menu--opened .main-header__nav {
+  position: absolute;
+  visibility: visible;
+  transform: translate(0);
+  opacity: 1;
+  width: 290px;
+  top: 60px;
+  right: 20px;
+  z-index: 4;
+
+  @media (min-width: $tablet-width) {
+    width: 286px;
+  }
+}
+
+.main-header__list {
+  @include reset-list;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  padding: 35px 0 35px 25px;
+  background-color: $accent-color;
+  text-transform: uppercase;
+}
+
+.main-header__item {
+  margin-bottom: 28px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main-header__link {
+  @include reset-link;
+
+  width: max-content;
+  max-width: 200px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: $white-color;
+  opacity: 0.7;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &--current {
+    opacity: 1;
+  }
+
+  &--disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+}
+
+.main-header__link--sublist {
+  position: relative;
+  padding-right: 27px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    width: 12px;
+    height: 12px;
+    mask-image: url("../../__spritemap#sprite-arrow-down-view");
+    mask-size: 12px 12px;
+    mask-repeat: no-repeat;
+    background-color: $white-color;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+}
+
+
+.main-header__item--active .main-header__link--sublist {
+  opacity: 1;
+
+  &::after {
+    opacity: 1;
+    transform: rotate(180deg) translateY(50%);
+  }
+}
+
+.main-header__sublist {
+  @include reset-list;
+
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.main-header__item--active .main-header__sublist {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding-top: 20px;
+}
+
+.main-header__subitem {
+  margin-bottom: 16px;
+  margin-left: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main-header__sublink {
+  @include reset-link;
+
+  width: max-content;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: $white-color;
+  opacity: 0.7;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &--current {
+    opacity: 1;
+  }
+
+  &--disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+}

@@ -1,4 +1,11 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
+import './modules/menu';
+import './modules/hero-slider.js';
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  window.addEventListener('load', () => {
+  });
+
+  window.addEventListener('resize', () => {
+  });
+});
