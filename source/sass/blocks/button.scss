@@ -1,0 +1,57 @@
+.button {
+  @include button-mobile;
+
+  position: relative;
+  border-radius: 30px;
+  border: 1px solid $accent-color;
+  color: $accent-color;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include button-tablet;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    border-radius: 44px;
+    width: 34px;
+    height: 34px;
+    background-color: $accent-color;
+
+    @media (min-width: $tablet-width) {
+      width: 46px;
+      height: 46px;
+      right: 5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 6px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    border-radius: 44px;
+    width: 34px;
+    height: 34px;
+    background-color: $white-color;
+    mask-image: url("../../__spritemap#sprite-arrow-view");
+    mask-size: 10px 10px;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 46px;
+      height: 46px;
+      right: 5px;
+    }
+  }
+}

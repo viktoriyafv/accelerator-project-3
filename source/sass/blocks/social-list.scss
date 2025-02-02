@@ -1,0 +1,65 @@
+.social-list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 40px;
+    right: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    grid-area: 1/2/2/3;
+    margin-left: auto;
+    gap: 20px;
+  }
+}
+
+.social-list__link {
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-color: $accent-color;
+  border-radius: 50px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 36px;
+    height: 36px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    background-color: $white-color;
+    mask-size: 12px 12px;
+
+    @media (min-width: $tablet-width) {
+      width: 36px;
+      height: 36px;
+      mask-size: 16px 16px;
+    }
+  }
+
+  &--vk::before {
+    mask-image: url("../../__spritemap#sprite-vk-view");
+  }
+
+  &--ok::before {
+    mask-image: url("../../__spritemap#sprite-ok-view");
+  }
+
+  &--reddit::before {
+    mask-image: url("../../__spritemap#sprite-reddit-view");
+  }
+}

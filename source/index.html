@@ -132,21 +132,27 @@
               <h2 class="hero__title">Глобальный профессиональный опыт обучения за рубежом</h2>
               <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий
                 стиль жизни!</p>
-              <div class="hero__button-wrapper"><button class="hero__button" type="button">Подробнее</button></div>
+              <div class="hero__button-wrapper">
+                <a class="hero__button button" href="#">Подробнее</a>
+              </div>
             </div>
           </li>
           <li class="hero__item swiper-slide hero__item--volunteer" tabindex="0">
             <div class="hero__text-wrapper">
               <h2 class="hero__title">Волонтёрские программы — внесите свой вклад в общество</h2>
               <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-              <div class="hero__button-wrapper"><button class="hero__button" type="button">Подробнее</button></div>
+              <div class="hero__button-wrapper">
+                <a class="hero__button button" href="#">Подробнее</a>
+              </div>
             </div>
           </li>
           <li class="hero__item swiper-slide hero__item--internship" tabindex="0">
             <div class="hero__text-wrapper">
               <h2 class="hero__title">Программы стажировок в крупнейших компаниях мира</h2>
               <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-              <div class="hero__button-wrapper"><button class="hero__button" type="button">Подробнее</button></div>
+              <div class="hero__button-wrapper">
+                <a class="hero__button button" href="#">Подробнее</a>
+              </div>
             </div>
           </li>
         </ul>
@@ -166,7 +172,7 @@
             им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель центра — наделить этих
             людей способностью инициировать значимые
             изменения.</p>
-          <button class="about__button" type="button"></button>
+          <button class="about__button button" type="button">подробнее о проекте</button>
         </div>
         <ul class="about__content">
           <li class="about__item">
@@ -179,7 +185,7 @@
           </li>
           <li class="about__item">
             <h3>участники из 60 стран</h3>
-            <p>студенты со всего мира приезжают на программу «Стажировки» от 3 месяцев до 1 года</p>
+            <p>студенты со всего мира приезжают на программу «Стажировки» от&nbsp;3&nbsp;месяцев до 1 года</p>
           </li>
           <li class="about__item">
             <h3>от 4 200 $ <br>до 8 400 $</h3>
@@ -193,11 +199,112 @@
     <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>
     <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
+    <article class="contacts" id="contacts">
+      <div class="contacts__wrapper">
+        <h3 class="contacts__title title" title="Контакты">Контакты</h3>
+        <ul class="contacts__list">
+          <li class="contacts__item contacts__item--address">
+            <h4 class="contacts__value">центральный офис</h4>
+            <span class="contacts__key">г. Новосибирск, ул. Щетинкина 68,
+              культурный центр</span>
+          </li>
+          <li class="contacts__item contacts__item--phone">
+            <h4 class="contacts__value">Телефон:</h4>
+            <a class="contacts__key" href="tel:89837454545">
+              +7 963 876 876 76
+            </a>
+          </li>
+          <li class="contacts__item contacts__item--email">
+            <h4 class="contacts__value">Email:</h4>
+            <a class="contacts__key" href="mailto:Info@stazh.ru">
+              Info@stazh.ru
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts__map-wrapper">
+        <picture>
+          <source media="(min-width: 1440px)" width="600" height="324" type="image/webp"
+            srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+          <source media="(min-width: 1440px)" width="600" height="324" type="image/png"
+            srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="768" height="340" type="image/webp"
+            srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+          <source media="(min-width: 768px)" width="768" height="340" type="image/png"
+            srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
+          <source width="320" height="343" type="image/webp"
+            srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+          <img class="contacts__map" src="img/map-mobile@1x.png" width="320" height="343"
+            srcset="img/map-mobile@2x.png 2x" alt="Адрес на карте" loading="lazy">
+        </picture>
+      </div>
+    </article>
     <div data-test="form">form</div>
   </main>
-  <footer class="main-footer">
-    <div data-test="footer">footer</div>
+  <footer class="main-footer" data-test="footer">
+    <div class="main-footer__wrapper">
+      <div class="main-footer__nav-wrapper">
+        <div class="main-footer__logo-wrapper">
+          <span class="visually-hidden">Логотип Проекта Internship</span>
+          <svg class="main-footer__logo" width="52" height="52" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-logo"></use>
+          </svg>
+        </div>
+        <nav class="main-footer__nav" aria-label="Навигация по сайту">
+          <ul class="main-footer__list">
+            <li class="main-footer__item">
+              <a class="main-footer__link" href="#about">
+                О проекте
+              </a>
+            </li>
+            <li class="main-footer__item">
+              <a class="main-footer__link" href="#programs">
+                Программы
+              </a>
+            </li>
+            <li class="main-footer__item">
+              <a class="main-footer__link" href="#grant">
+                Как поехать
+              </a>
+            </li>
+            <li class="main-footer__item">
+              <a class="main-footer__link" href="#reviews">
+                Отзывы
+              </a>
+            </li>
+            <li class="main-footer__item">
+              <a class="main-footer__link" href="#news">
+                Новости
+              </a>
+            </li>
+            <li class="main-footer__item">
+              <a class="main-footer__link" href="#contacts">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <a class="main-footer__politics" href="#">Политика конфиденциальности</a>
+      <span class="main-footer__copyright">Стажировка © 2023 Все права защищены</span>
+      <ul class="main-footer__social-list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" target="_blank">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--ok" href="https://htmlacademy.ru" target="_blank">
+            <span class="visually-hidden">Одноклассники</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--reddit" href="https://htmlacademy.ru" target="_blank">
+            <span class="visually-hidden">Reddit</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </footer>
 
 
