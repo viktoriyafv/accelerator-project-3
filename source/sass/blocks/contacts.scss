@@ -108,7 +108,6 @@
 .contacts__map-wrapper {
   width: 290px;
   height: 240px;
-  border-radius: 16px;
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -142,6 +141,7 @@
   display: block;
   width: 290px;
   height: 240px;
+  border-radius: 16px;
 
   @media (min-width: $tablet-width) {
     width: 678px;
