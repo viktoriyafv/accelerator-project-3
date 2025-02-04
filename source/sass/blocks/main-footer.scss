@@ -95,6 +95,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: $form-color;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -104,6 +105,24 @@
   @media (min-width: $desktop-width) {
     font-size: 16px;
     line-height: 26px;
+  }
+
+  &:hover {
+    color: rgba(49, 109, 194, 0.7);
+  }
+
+  &:focus {
+    outline: none;
+    color: $accent-color;
+  }
+
+  &:active {
+    color: $active-button;
+  }
+
+  &--disabled {
+    color: $disabled-button;
+    cursor: not-allowed;
   }
 }
 
@@ -118,6 +137,7 @@
   border-bottom: 1px solid $form-color;
   padding-bottom: 2px;
   margin-bottom: 10px;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     line-height: 12px;
@@ -131,6 +151,30 @@
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 0;
+  }
+
+  &:hover {
+    color: $accent-color;
+    border-bottom: 1px solid $accent-color;
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+    color: $accent-color;
+    border-bottom: 1px solid $accent-color;
+    opacity: 1;
+  }
+
+  &:active {
+    color: $active-button;
+    border-bottom: 1px solid $active-button;
+  }
+
+  &--disabled {
+    color: $disabled-button;
+    border-bottom: 1px solid $disabled-button;
+    cursor: not-allowed;
   }
 }
 

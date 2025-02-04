@@ -1,0 +1,33 @@
+.select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  border-radius: 8px;
+  padding: 14px 19px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+  cursor: inherit;
+
+  &:focus {
+    padding: 17px 20px;
+  }
+}
+
+.select:hover,
+.select:focus,
+.select:active {
+  border-color: #484848;
+}
+
+
+.select__control-text {
+  width: auto;
+}

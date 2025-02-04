@@ -71,7 +71,7 @@
     background-color: $accent-color;
     border-radius: 50px;
 
-    @media (width >= 768px) {
+    @media (width >=768px) {
       top: 5px;
       right: 5px;
     }
@@ -92,19 +92,9 @@
     background-color: $white-color;
     z-index: 4;
 
-    @media (width >= 768px) {
+    @media (width >=768px) {
       top: 5px;
       right: 5px;
-    }
-  }
-
-  &:disabled {
-    border: 1px solid $disabled-button;
-    color: $disabled-button;
-    cursor: not-allowed;
-
-    &::after {
-      background-color: $disabled-button;
     }
   }
 
@@ -114,7 +104,7 @@
     background-color: $accent-color;
     color: $white-color;
 
-    @media (width >= 768px) {
+    @media (width >=768px) {
       width: 286px;
     }
   }
@@ -144,6 +134,16 @@
       background-color: $white-color;
     }
   }
+
+  &:disabled {
+    border: 1px solid $disabled-button;
+    color: $disabled-button;
+    cursor: not-allowed;
+
+    &::after {
+      background-color: $disabled-button;
+    }
+  }
 }
 
 .main-header__nav {
@@ -159,7 +159,7 @@
   background-color: $accent-color;
   color: $white-color;
 
-  @media (width >= 768px) {
+  @media (width >=768px) {
     width: 286px;
   }
 

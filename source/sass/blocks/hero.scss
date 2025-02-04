@@ -356,4 +356,14 @@
     min-height: 58px;
     padding: 21px 81px 21px 30px;
   }
+
+  &--disabled {
+    border: 1px solid $disabled-button;
+    color: $disabled-button;
+    cursor: not-allowed;
+
+    &::after {
+      background-color: $disabled-button;
+    }
+  }
 }

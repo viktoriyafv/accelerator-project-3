@@ -357,7 +357,47 @@
       </ul>
     </div>
   </footer>
-
+  <div class="modal visually-hidden">
+    <div class="modal__wrapper">
+      <button class="modal__close-button" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal__content">
+        <h2 class="modal__title">Напишите нам</h2>
+        <p class="modal__text">Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="modal__input-wrapper">
+            <label class="modal__label" for="name">Имя</label>
+            <input class="modal__field" id="name" type="text" pattern="[а-яА-ЯёЁa-zA-Z\s]+" name="name" required>
+          </div>
+          <div class="modal__input-wrapper">
+            <label class="modal__label" for="tel">Телефон</label>
+            <input class="modal__field" id="tel" type="tel" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="13"
+              name="phone" required>
+          </div>
+          <div class="modal__input-wrapper">
+            <span class="modal__label" for="message">Выберите город</span>
+            <div class="modal__field modal__select-wrapper">
+              <select class="modal__select select" aria-label="Выбирите город" required>
+                <option class="select__control-text" value=""></option>
+                <option class="select__control-text" value="Санкт-Петербург">Санкт-Петербург</option>
+                <option class="select__control-text" value="Петрозаводск">Петрозаводск</option>
+                <option class="select__control-text" value="Москва">Москва</option>
+                <option class="select__control-text" value="Смоленск">Смоленск</option>
+              </select>
+              <span class="select__focus"></span>
+            </div>
+          </div>
+          <label class="modal__control">
+            <input class="modal__control-input visually-hidden" type="checkbox" name="policy" required>
+            <span class="modal__control-mark"></span>
+            <span class="modal__control-label">Я согласен на обработку моих персональных данных</span>
+          </label>
+          <button class="modal__button-submit button" type="submit">отправить</button>
+        </form>
+      </section>
+    </div>
+  </div>
 
   <script type="module" src="js/main.js"></script>
 </body>
