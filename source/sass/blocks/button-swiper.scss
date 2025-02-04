@@ -1,0 +1,72 @@
+.button-swiper {
+  position: relative;
+  border: none;
+  background-color: inherit;
+  width: 22px;
+  height: 22px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background-color: $accent-color;
+    border-radius: 50%;
+    mask-image: url("../../__spritemap#sprite-arrow-slider-view");
+    mask-size: 10px 10px;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+  }
+
+  &--prev {
+    margin-right: 8px;
+  }
+
+  &--next {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border-radius: 30px;
+    background-color: $white-color;
+  }
+
+  &:active {
+    border-radius: 30px;
+    background-color: $white-color;
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &::after {
+      background-color: $disabled-button;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: inherit;
+
+      &::after {
+        background-color: $disabled-button;
+        opacity: 1;
+      }
+    }
+  }
+}
