@@ -10,13 +10,9 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
-  <link rel="preload" href="fonts/Manrope-ExtraBold.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="fonts/Manrope-Bold.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="fonts/Manrope-SemiBold.woff2" type="font/woff2" as="font">
   <link rel="preload" href="fonts/Manrope-Regular.woff2" type="font/woff2" as="font">
   <link rel="preload" href="fonts/Manrope-Medium.woff2" type="font/woff2" as="font">
   <link rel="preload" href="fonts/Manrope-Light.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="fonts/Manrope-ExtraLight.woff2" type="font/woff2" as="font">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
@@ -161,7 +157,7 @@
     <section class="about" id="about" data-test="about">
       <div class="about__wrapper">
         <div class="about__title-wrapper">
-          <h1 class="about__title">О проекте «Стажировка»</h1>
+          <h2 class="about__title">О проекте «Стажировка»</h2>
           <p>«Стажировка» — совместный проект
             правительств и волонтёрских бригад.</p>
         </div>
@@ -305,12 +301,72 @@
               не больше 3х месяцев подряд
               непрерывно в одной стране
             </li>
-            </o>
+          </ol>
         </div>
       </div>
     </article>
     <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
+    <section class="faq" data-test="FAQ">
+      <div class="faq__wrapper">
+        <h2 class="faq__title">Вопросы и ответы</h2>
+        <ul class="faq__list faq__list--active" id="tab-1">
+          <li class="faq__item" tabindex="0">
+            <div class="faq__question-wrapper">
+              <h3 class="faq__question">Кто организатор? Какие сроки у программы?</h3>
+              <button class="faq__list-button" type="button" tabindex="-1"><span class="visually-hidden">Развернуть/свернуть
+                  ответ.</span></button>
+            </div>
+            <p>Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями.
+              Сроки программы обмена могут варьироваться от одного семестра до года.
+            </p>
+          </li>
+          <li class="faq__item" tabindex="0">
+            <div class="faq__question-wrapper">
+              <h3 class="faq__question">Что такое грант на&nbsp;обучение?</h3>
+              <button class="faq__list-button" type="button" tabindex="-1"><span class="visually-hidden">Развернуть/свернуть
+                  ответс.</span></button>
+            </div>
+            <p>Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена
+              студентами для оплаты учебных расходов.
+            </p>
+          </li>
+          <li class="faq__item faq__item--active" tabindex="0">
+            <div class="faq__question-wrapper">
+              <h3 class="faq__question">Как определяется стоимость программы?</h3>
+              <button class="faq__list-button" type="button" tabindex="-1"><span class="visually-hidden">Развернуть/свернуть
+                  ответ.</span></button>
+            </div>
+            <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант
+              «Стажировка»
+              не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
+            </p>
+          </li>
+          <li class="faq__item" tabindex="0">
+            <div class="faq__question-wrapper">
+              <h3 class="faq__question">Признаётся ли учёба в рамках проекта<br>для дальнейшего обучения?</h3>
+              <button class="faq__list-button" type="button" tabindex="-1"><span class="visually-hidden">Развернуть/свернуть
+                  ответ.</span></button>
+            </div>
+            <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей
+              профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие
+              университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.
+            </p>
+          </li>
+          <li class="faq__item" tabindex="0">
+            <div class="faq__question-wrapper">
+              <h3 class="faq__question">Как выглядит полный процесс регистрации на программу «Стажировка»?</h3>
+              <button class="faq__list-button" type="button" tabindex="-1"><span class="visually-hidden">Развернуть/свернуть
+                  ответ.</span></button>
+            </div>
+            <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение
+              с координатором программы, заполнение заявления и предоставление необходимых документов, прохождение
+              интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание договора
+              об участии в программе. Подробнее можно узнать позвонив в центр.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
     <div data-test="reviews">reviews</div>
     <article class="contacts" id="contacts" data-test="contacts">
       <div class="contacts__wrapper">
@@ -402,17 +458,17 @@
       <span class="main-footer__copyright">Стажировка © 2023 Все права защищены</span>
       <ul class="main-footer__social-list social-list">
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" target="_blank">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" rel="noreferrer noopener" target="_blank">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--ok" href="https://htmlacademy.ru" target="_blank">
+          <a class="social-list__link social-list__link--ok" href="https://htmlacademy.ru" rel="noreferrer noopener" target="_blank">
             <span class="visually-hidden">Одноклассники</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--reddit" href="https://htmlacademy.ru" target="_blank">
+          <a class="social-list__link social-list__link--reddit" href="https://htmlacademy.ru" rel="noreferrer noopener" target="_blank">
             <span class="visually-hidden">Reddit</span>
           </a>
         </li>
@@ -438,16 +494,15 @@
               name="phone" required>
           </div>
           <div class="modal__input-wrapper">
-            <span class="modal__label" for="message">Выберите город</span>
-            <div class="modal__field modal__select-wrapper">
-              <select class="modal__select select" aria-label="Выбирите город" required>
-                <option class="select__control-text" value=""></option>
-                <option class="select__control-text" value="Санкт-Петербург">Санкт-Петербург</option>
-                <option class="select__control-text" value="Петрозаводск">Петрозаводск</option>
-                <option class="select__control-text" value="Москва">Москва</option>
-                <option class="select__control-text" value="Смоленск">Смоленск</option>
-              </select>
-              <span class="select__focus"></span>
+            <label class="modal__label" for="city">Выберите город</label>
+            <div class="modal__dropdown dropdown" tabindex="0">
+              <input class="modal__field dropdown__field" type="text" id="city" name="city" readonly required>
+              <div class="dropdown__option">
+                <div class="dropdown__option-text">Санкт-Петербург</div>
+                <div class="dropdown__option-text">Петрозаводск</div>
+                <div class="dropdown__option-text">Москва</div>
+                <div class="dropdown__option-text">Смоленск</div>
+              </div>
             </div>
           </div>
           <label class="modal__control">

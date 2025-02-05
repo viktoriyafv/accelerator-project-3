@@ -45,26 +45,26 @@
     background-image:
       $overlay-photo,
       image-set(url("../../img/hero-mobile-1@1x.webp") type("image/webp") 1x,
-        url("../../img/hero-mobile-1@2x.webp") type("image/webp") 2x,
-        url("../../img/hero-mobile-1@1x.jpg") type("image/jpeg") 1x,
-        url("../../img/hero-mobile-1@2x.jpg") type("image/jpeg") 2x);
+      url("../../img/hero-mobile-1@2x.webp") type("image/webp") 2x,
+      url("../../img/hero-mobile-1@1x.jpg") type("image/jpeg") 1x,
+      url("../../img/hero-mobile-1@2x.jpg") type("image/jpeg") 2x);
 
-    @media (min-width: 321px) {
+    @media (width >= 321px) {
       background-image:
         $overlay-photo,
         image-set(url("../../img/hero-tablet-1@1x.webp") type("image/webp") 1x,
-          url("../../img/hero-tablet-1@2x.webp") type("image/webp") 2x,
-          url("../../img/hero-tablet-1@1x.jpg") type("image/jpeg") 1x,
-          url("../../img/hero-tablet-1@2x.jpg") type("image/jpeg") 2x);
+        url("../../img/hero-tablet-1@2x.webp") type("image/webp") 2x,
+        url("../../img/hero-tablet-1@1x.jpg") type("image/jpeg") 1x,
+        url("../../img/hero-tablet-1@2x.jpg") type("image/jpeg") 2x);
     }
 
-    @media (min-width: 769px) {
+    @media (width >= 769px) {
       background-image:
         $overlay-photo,
         image-set(url("../../img/hero-desktop-1@1x.webp") type("image/webp") 1x,
-          url("../../img/hero-desktop-1@2x.webp") type("image/webp") 2x,
-          url("../../img/hero-desktop-1@1x.jpg") type("image/jpeg") 1x,
-          url("../../img/hero-desktop-1@2x.jpg") type("image/jpeg") 2x);
+        url("../../img/hero-desktop-1@2x.webp") type("image/webp") 2x,
+        url("../../img/hero-desktop-1@1x.jpg") type("image/jpeg") 1x,
+        url("../../img/hero-desktop-1@2x.jpg") type("image/jpeg") 2x);
     }
   }
 
@@ -72,26 +72,26 @@
     background-image:
       $overlay-photo,
       image-set(url("../../img/hero-mobile-2@1x.webp") type("image/webp") 1x,
-        url("../../img/hero-mobile-2@2x.webp") type("image/webp") 2x,
-        url("../../img/hero-mobile-2@1x.jpg") type("image/jpeg") 1x,
-        url("../../img/hero-mobile-2@2x.jpg") type("image/jpeg") 2x);
+      url("../../img/hero-mobile-2@2x.webp") type("image/webp") 2x,
+      url("../../img/hero-mobile-2@1x.jpg") type("image/jpeg") 1x,
+      url("../../img/hero-mobile-2@2x.jpg") type("image/jpeg") 2x);
 
-    @media (min-width: 321px) {
+    @media (width >= 321px) {
       background-image:
         $overlay-photo,
         image-set(url("../../img/hero-tablet-2@1x.webp") type("image/webp") 1x,
-          url("../../img/hero-tablet-2@2x.webp") type("image/webp") 2x,
-          url("../../img/hero-tablet-2@1x.jpg") type("image/jpeg") 1x,
-          url("../../img/hero-tablet-2@2x.jpg") type("image/jpeg") 2x);
+        url("../../img/hero-tablet-2@2x.webp") type("image/webp") 2x,
+        url("../../img/hero-tablet-2@1x.jpg") type("image/jpeg") 1x,
+        url("../../img/hero-tablet-2@2x.jpg") type("image/jpeg") 2x);
     }
 
-    @media (min-width: 769px) {
+    @media (width >= 769px) {
       background-image:
         $overlay-photo,
         image-set(url("../../img/hero-desktop-2@1x.webp") type("image/webp") 1x,
-          url("../../img/hero-desktop-2@2x.webp") type("image/webp") 2x,
-          url("../../img/hero-desktop-2@1x.jpg") type("image/jpeg") 1x,
-          url("../../img/hero-desktop-2@2x.jpg") type("image/jpeg") 2x);
+        url("../../img/hero-desktop-2@2x.webp") type("image/webp") 2x,
+        url("../../img/hero-desktop-2@1x.jpg") type("image/jpeg") 1x,
+        url("../../img/hero-desktop-2@2x.jpg") type("image/jpeg") 2x);
     }
   }
 
@@ -99,26 +99,26 @@
     background-image:
       $overlay-photo,
       image-set(url("../../img/hero-mobile-3@1x.webp") type("image/webp") 1x,
-        url("../../img/hero-mobile-3@2x.webp") type("image/webp") 2x,
-        url("../../img/hero-mobile-3@1x.jpg") type("image/jpeg") 1x,
-        url("../../img/hero-mobile-3@2x.jpg") type("image/jpeg") 2x);
+      url("../../img/hero-mobile-3@2x.webp") type("image/webp") 2x,
+      url("../../img/hero-mobile-3@1x.jpg") type("image/jpeg") 1x,
+      url("../../img/hero-mobile-3@2x.jpg") type("image/jpeg") 2x);
 
-    @media (min-width: 321px) {
+    @media (width >= 321px) {
       background-image:
         $overlay-photo,
         image-set(url("../../img/hero-tablet-3@1x.webp") type("image/webp") 1x,
-          url("../../img/hero-tablet-3@2x.webp") type("image/webp") 2x,
-          url("../../img/hero-tablet-3@1x.jpg") type("image/jpeg") 1x,
-          url("../../img/hero-tablet-3@2x.jpg") type("image/jpeg") 2x);
+        url("../../img/hero-tablet-3@2x.webp") type("image/webp") 2x,
+        url("../../img/hero-tablet-3@1x.jpg") type("image/jpeg") 1x,
+        url("../../img/hero-tablet-3@2x.jpg") type("image/jpeg") 2x);
     }
 
-    @media (min-width: 769px) {
+    @media (width >= 769px) {
       background-image:
         $overlay-photo,
         image-set(url("../../img/hero-desktop-3@1x.webp") type("image/webp") 1x,
-          url("../../img/hero-desktop-3@2x.webp") type("image/webp") 2x,
-          url("../../img/hero-desktop-3@1x.jpg") type("image/jpeg") 1x,
-          url("../../img/hero-desktop-3@2x.jpg") type("image/jpeg") 2x);
+        url("../../img/hero-desktop-3@2x.webp") type("image/webp") 2x,
+        url("../../img/hero-desktop-3@1x.jpg") type("image/jpeg") 1x,
+        url("../../img/hero-desktop-3@2x.jpg") type("image/jpeg") 2x);
     }
   }
 }
@@ -291,7 +291,6 @@
   @media (min-width: $desktop-width) {
     width: 968px;
     padding: 40px 50px 30px;
-    font-family: Manrope;
     font-size: 54px;
     line-height: 62px;
   }
@@ -356,8 +355,24 @@
     min-height: 58px;
     padding: 21px 81px 21px 30px;
   }
+}
 
-  &--disabled {
+.hero__button--disabled {
+  border: 1px solid $disabled-button;
+  background-color: inherit;
+  color: $disabled-button;
+  pointer-events: none;
+  cursor: not-allowed;
+
+  &::after {
+    background-color: $white-color;
+  }
+
+  &::before {
+    background-color: $disabled-button;
+  }
+
+  &:hover {
     border: 1px solid $disabled-button;
     background-color: inherit;
     color: $disabled-button;
@@ -366,27 +381,11 @@
 
     &::after {
       background-color: $white-color;
+      transform: translateY(-50%);
     }
 
     &::before {
       background-color: $disabled-button;
-    }
-
-    &:hover {
-      border: 1px solid $disabled-button;
-      background-color: inherit;
-      color: $disabled-button;
-      pointer-events: none;
-      cursor: not-allowed;
-
-      &::after {
-        background-color: $white-color;
-        transform: translateY(-50%);
-      }
-
-      &::before {
-        background-color: $disabled-button;
-      }
     }
   }
 }

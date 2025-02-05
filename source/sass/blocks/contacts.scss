@@ -46,6 +46,7 @@
 .contacts__list {
   @include reset-list;
   @include flex-column;
+
   align-items: flex-start;
 
   gap: 20px;
@@ -70,6 +71,7 @@
 
 .contacts__value {
   @include reset-title;
+
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
@@ -117,7 +119,7 @@
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -145,7 +147,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -30px;
     left: 0;

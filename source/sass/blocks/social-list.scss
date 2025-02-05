@@ -82,14 +82,14 @@
   &:active {
     background-color: $active-button;
   }
+}
 
-  &--disabled {
-    cursor: not-allowed;
-    background-color: $disabled-button;
+.social-list__link--disabled {
+  cursor: not-allowed;
+  background-color: $disabled-button;
+  opacity: 0.7;
+
+  &::before {
     opacity: 0.7;
-
-    &::before {
-      opacity: 0.7;
-    }
   }
 }
