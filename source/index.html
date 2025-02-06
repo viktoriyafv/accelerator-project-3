@@ -192,7 +192,7 @@
     </section>
     <section class="programs" id="programs" data-test="programs">
       <div class="programs__wrapper">
-        <h2 class="programs__title">Программы</h2>
+        <h2 class="programs__title title">Программы</h2>
         <div class="programs__button-swiper-wrapper">
           <button class="programs__button-swiper programs__button-swiper--prev button-swiper button-swiper--prev"
             type="button">
@@ -308,12 +308,13 @@
     <div data-test="news">news</div>
     <section class="faq" data-test="FAQ">
       <div class="faq__wrapper">
-        <h2 class="faq__title">Вопросы и ответы</h2>
+        <h2 class="faq__title title">Вопросы и ответы</h2>
         <ul class="faq__list faq__list--active" id="tab-1">
           <li class="faq__item" tabindex="0">
             <div class="faq__question-wrapper">
               <h3 class="faq__question">Кто организатор? Какие сроки у программы?</h3>
-              <button class="faq__list-button" type="button" tabindex="-1"><span class="visually-hidden">Развернуть/свернуть
+              <button class="faq__list-button" type="button" tabindex="-1"><span
+                  class="visually-hidden">Развернуть/свернуть
                   ответ.</span></button>
             </div>
             <p>Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями.
@@ -323,7 +324,8 @@
           <li class="faq__item" tabindex="0">
             <div class="faq__question-wrapper">
               <h3 class="faq__question">Что такое грант на&nbsp;обучение?</h3>
-              <button class="faq__list-button" type="button" tabindex="-1"><span class="visually-hidden">Развернуть/свернуть
+              <button class="faq__list-button" type="button" tabindex="-1"><span
+                  class="visually-hidden">Развернуть/свернуть
                   ответс.</span></button>
             </div>
             <p>Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена
@@ -333,7 +335,8 @@
           <li class="faq__item faq__item--active" tabindex="0">
             <div class="faq__question-wrapper">
               <h3 class="faq__question">Как определяется стоимость программы?</h3>
-              <button class="faq__list-button" type="button" tabindex="-1"><span class="visually-hidden">Развернуть/свернуть
+              <button class="faq__list-button" type="button" tabindex="-1"><span
+                  class="visually-hidden">Развернуть/свернуть
                   ответ.</span></button>
             </div>
             <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант
@@ -344,7 +347,8 @@
           <li class="faq__item" tabindex="0">
             <div class="faq__question-wrapper">
               <h3 class="faq__question">Признаётся ли учёба в рамках проекта<br>для дальнейшего обучения?</h3>
-              <button class="faq__list-button" type="button" tabindex="-1"><span class="visually-hidden">Развернуть/свернуть
+              <button class="faq__list-button" type="button" tabindex="-1"><span
+                  class="visually-hidden">Развернуть/свернуть
                   ответ.</span></button>
             </div>
             <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей
@@ -355,7 +359,8 @@
           <li class="faq__item" tabindex="0">
             <div class="faq__question-wrapper">
               <h3 class="faq__question">Как выглядит полный процесс регистрации на программу «Стажировка»?</h3>
-              <button class="faq__list-button" type="button" tabindex="-1"><span class="visually-hidden">Развернуть/свернуть
+              <button class="faq__list-button" type="button" tabindex="-1"><span
+                  class="visually-hidden">Развернуть/свернуть
                   ответ.</span></button>
             </div>
             <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение
@@ -367,7 +372,164 @@
         </ul>
       </div>
     </section>
-    <div data-test="reviews">reviews</div>
+    <article class="reviews" data-test="reviews">
+      <div class="reviews__wrapper">
+        <h2 class="reviews__title title">Отзывы</h2>
+        <div class="reviews__button-swiper-wrapper">
+          <button class="reviews__button-swiper reviews__button-swiper--prev button-swiper button-swiper--prev"
+            type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="reviews__button-swiper reviews__button-swiper--next button-swiper button-swiper--next"
+            type="button">
+            <span class="visually-hidden">Следующий слайд.</span>
+          </button>
+        </div>
+        <div class="reviews__swiper swiper">
+          <ul class="reviews__list swiper-wrapper">
+            <li class="reviews__item swiper-slide" tabindex="0">
+              <div class="reviews__data-wrapper">
+                <div class="reviews__avatar-wrapper">
+                  <picture>
+                    <source width="60" height="60" type="image/webp"
+                      srcset="img/avatar-1@1x.webp 1x, img/avatar-1@2x.webp 2x">
+                    <img class="reviews__avatar" src="img/avatar-1@1x.png" width="60" height="60" srcset="img/avatar-1@2x.png 2x"
+                      alt="Лола Алекс." loading="lazy">
+                  </picture>
+                </div>
+                <div class="reviews__author-wrapper">
+                  <span class="reviews__author reviews__author--name">Лола</span>
+                  <span class="reviews__author reviews__author--surname">Алекс</span>
+                </div>
+                <div class="reviews__data">
+                  <p class="reviews__key">программа</p>
+                  <p class="reviews__value">Masa Art Challenge</p>
+                </div>
+                <div class="reviews__time">
+                  <p class="reviews__key">Дата</p>
+                  <p class="reviews__value">Осень 2022</p>
+                </div>
+              </div>
+              <div class="reviews__comment">
+                <h3 class="reviews__heading">Я могу с уверенностью сказать, что это был
+                  один из самых незабываемых опытов
+                  в жизни!</h3>
+                <p>Я рекомендую программу «Стажировка» всем студентам,
+                  желающим получить незабываемые впечатления. Сочетание
+                  путешествий, общения и значимой работы действительно
+                  отличает её от других программ, и я чувствую огромную
+                  благодарность за предоставленную мне возможность.</p>
+              </div>
+            </li>
+            <li class="reviews__item swiper-slide" tabindex="0">
+              <div class="reviews__data-wrapper">
+                <div class="reviews__avatar-wrapper">
+                  <picture>
+                    <source width="60" height="60" type="image/webp"
+                      srcset="img/avatar-2@1x.webp 1x, img/avatar-2@2x.webp 2x">
+                    <img class="reviews__avatar" src="img/avatar-2@1x.png" width="60" height="60" srcset="img/avatar-2@2x.png 2x"
+                      alt="Давид Иванов." loading="lazy">
+                  </picture>
+                </div>
+                <div class="reviews__author-wrapper">
+                  <span class="reviews__author reviews__author--name">Давид</span>
+                  <span class="reviews__author reviews__author--surname">Иванов</span>
+                </div>
+                <div class="reviews__data">
+                  <p class="reviews__key">программа</p>
+                  <p class="reviews__value">Volunteer Chance</p>
+                </div>
+                <div class="reviews__time">
+                  <p class="reviews__key">Дата</p>
+                  <p class="reviews__value">Лето 2022</p>
+                </div>
+              </div>
+              <div class="reviews__comment">
+                <h3 class="reviews__heading">Благодаря опыту стажировки я узнал
+                  так много нового о себе и об окружающем
+                  мире.</h3>
+                <p>Каждый день был возможностью оказать ощутимое влияние
+                  на жизнь других людей. Я бы очень рекомендовал
+                  эту волонтёрскую программу всем, кто ищет значимый
+                  и незабываемый опыт. Организация была на высшем уровне.
+                  Для меня было честью быть частью такой удивительной
+                  инициативы.</p>
+              </div>
+            </li>
+            <li class="reviews__item swiper-slide" tabindex="0">
+              <div class="reviews__data-wrapper">
+                <div class="reviews__avatar-wrapper">
+                  <picture>
+                    <source width="60" height="60" type="image/webp"
+                      srcset="img/avatar-1@1x.webp 1x, img/avatar-1@2x.webp 2x">
+                    <img class="reviews__avatar" src="img/avatar-1@1x.png" width="60" height="60" srcset="img/avatar-1@2x.png 2x"
+                      alt="Лола Алекс." loading="lazy">
+                  </picture>
+                </div>
+                <div class="reviews__author-wrapper">
+                  <span class="reviews__author reviews__author--name">Лола</span>
+                  <span class="reviews__author reviews__author--surname">Алекс</span>
+                </div>
+                <div class="reviews__data">
+                  <p class="reviews__key">программа</p>
+                  <p class="reviews__value">Masa Art Challenge</p>
+                </div>
+                <div class="reviews__time">
+                  <p class="reviews__key">Дата</p>
+                  <p class="reviews__value">Осень 2022</p>
+                </div>
+              </div>
+              <div class="reviews__comment">
+                <h3 class="reviews__heading">Я могу с уверенностью сказать, что это был
+                  один из самых незабываемых опытов
+                  в жизни!</h3>
+                <p>Я рекомендую программу «Стажировка» всем студентам,
+                  желающим получить незабываемые впечатления. Сочетание
+                  путешествий, общения и значимой работы действительно
+                  отличает её от других программ, и я чувствую огромную
+                  благодарность за предоставленную мне возможность.</p>
+              </div>
+            </li>
+            <li class="reviews__item swiper-slide" tabindex="0">
+              <div class="reviews__data-wrapper">
+                <div class="reviews__avatar-wrapper">
+                  <picture>
+                    <source width="60" height="60" type="image/webp"
+                      srcset="img/avatar-2@1x.webp 1x, img/avatar-2@2x.webp 2x">
+                    <img class="reviews__avatar" src="img/avatar-2@1x.png" width="60" height="60" srcset="img/avatar-2@2x.png 2x"
+                      alt="Давид Иванов." loading="lazy">
+                  </picture>
+                </div>
+                <div class="reviews__author-wrapper">
+                  <span class="reviews__author reviews__author--name">Давид</span>
+                  <span class="reviews__author reviews__author--surname">Иванов</span>
+                </div>
+                <div class="reviews__data">
+                  <p class="reviews__key">программа</p>
+                  <p class="reviews__value">Volunteer Chance</p>
+                </div>
+                <div class="reviews__time">
+                  <p class="reviews__key">Дата</p>
+                  <p class="reviews__value">Лето 2022</p>
+                </div>
+              </div>
+              <div class="reviews__comment">
+                <h3 class="reviews__heading">Благодаря опыту стажировки я узнал
+                  так много нового о себе и об окружающем
+                  мире.</h3>
+                <p>Каждый день был возможностью оказать ощутимое влияние
+                  на жизнь других людей. Я бы очень рекомендовал
+                  эту волонтёрскую программу всем, кто ищет значимый
+                  и незабываемый опыт. Организация была на высшем уровне.
+                  Для меня было честью быть частью такой удивительной
+                  инициативы.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="reviews__scrollbar"></div>
+      </div>
+    </article>
     <article class="contacts" id="contacts" data-test="contacts">
       <div class="contacts__wrapper">
         <h3 class="contacts__title title" title="Контакты">Контакты</h3>
@@ -458,17 +620,20 @@
       <span class="main-footer__copyright">Стажировка © 2023 Все права защищены</span>
       <ul class="main-footer__social-list social-list">
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" rel="noreferrer noopener" target="_blank">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" rel="noreferrer noopener"
+            target="_blank">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--ok" href="https://htmlacademy.ru" rel="noreferrer noopener" target="_blank">
+          <a class="social-list__link social-list__link--ok" href="https://htmlacademy.ru" rel="noreferrer noopener"
+            target="_blank">
             <span class="visually-hidden">Одноклассники</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--reddit" href="https://htmlacademy.ru" rel="noreferrer noopener" target="_blank">
+          <a class="social-list__link social-list__link--reddit" href="https://htmlacademy.ru" rel="noreferrer noopener"
+            target="_blank">
             <span class="visually-hidden">Reddit</span>
           </a>
         </li>

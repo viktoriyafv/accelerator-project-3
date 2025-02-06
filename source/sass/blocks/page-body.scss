@@ -4,12 +4,13 @@
   min-width: 320px;
   display: flex;
   flex-direction: column;
-  padding: 0;
+  background-color: $background-color;
   font-family: $primary-font;
   color: $primary-text-color;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
+  padding: 0;
   overflow-x: hidden;
 
   @media (width >= 768px) {
