@@ -56,3 +56,28 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+
+@mixin angle-left-up {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  mask-image: url("../../__spritemap#sprite-angle-left-up-view");
+  mask-size: 16px 16px;
+  mask-repeat: no-repeat;
+  background-color: inherit;
+  z-index: 2;
+}
+
+
+@mixin angle-left-down {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  mask-image: url("../../img/sprite/angle-left-down.svg");
+  mask-size: 16px 16px;
+  mask-repeat: no-repeat;
+  background-color: inherit;
+  z-index: 2;
+}

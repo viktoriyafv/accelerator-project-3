@@ -136,16 +136,10 @@
   gap: 12px;
 
   &::after {
-    content: "";
-    position: absolute;
+    @include angle-left-up;
+
     bottom: 0;
-    right: -10px;
-    width: 10px;
-    height: 10px;
-    background-image: url("../../img/sprite/angle-left-up.svg");
-    background-size: 10px 10px;
-    background-repeat: no-repeat;
-    z-index: 2;
+    right: -16px;
   }
 
   @media (min-width: $tablet-width) {
@@ -240,16 +234,10 @@
   }
 
   &::after {
-    content: "";
-    position: absolute;
+    @include angle-left-down;
+
     top: 0;
-    right: -10px;
-    width: 10px;
-    height: 10px;
-    background-image: url("../../img/sprite/angle-left-down.svg");
-    background-size: 10px 10px;
-    background-repeat: no-repeat;
-    z-index: 2;
+    right: -16px;
 
     @media (min-width: $tablet-width) {
       right: -20px;
@@ -318,17 +306,10 @@
   }
 
   &::after {
-    content: "";
-    display: block;
-    position: absolute;
+    @include angle-left-down;
+
     top: 0;
-    right: -10px;
-    width: 10px;
-    height: 10px;
-    background-image: url("../../img/sprite/angle-left-down.svg");
-    background-size: 10px 10px;
-    background-repeat: no-repeat;
-    z-index: 2;
+    right: -16px;
 
     @media (min-width: $tablet-width) {
       display: none;
