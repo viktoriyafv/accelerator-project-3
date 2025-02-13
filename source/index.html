@@ -206,8 +206,8 @@
         <div class="programs__swiper swiper">
           <ul class="programs__list swiper-wrapper">
             <li class="programs__item swiper-slide programs__item--internship" tabindex="0">
-                <h2 class="programs__heading">Стажировки</h2>
-                <div class="programs__text-wrapper">
+              <h2 class="programs__heading">Стажировки</h2>
+              <div class="programs__text-wrapper">
                 <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
                 <a class="programs__button-item button-item" href="#"><span class="visually-hidden">Подробнее</span></a>
               </div>
@@ -428,7 +428,7 @@
                 <a class="news__button-item button-item" href="#"><span class="visually-hidden">Подробнее</span></a>
               </div>
             </li>
-            <li class="news__item swiper-slide news__item--interview news__item--big" tabindex="0">
+            <li class="news__item swiper-slide news__item--interview" tabindex="0">
               <span class="news__date">23/03/2023</span>
               <h3 class="news__heading">Интервью с участницей
                 программы стажировки</h3>
@@ -461,7 +461,7 @@
                 <a class="news__button-item button-item" href="#"><span class="visually-hidden">Подробнее</span></a>
               </div>
             </li>
-            <li class="news__item swiper-slide news__item--interview news__item--big" tabindex="0">
+            <li class="news__item swiper-slide news__item--interview" tabindex="0">
               <span class="news__date">23/03/2023</span>
               <h3 class="news__heading">Интервью с участницей
                 программы стажировки</h3>
@@ -770,7 +770,47 @@
         </div>
       </div>
     </article>
-    <div data-test="form">form</div>
+    <section class="form" data-test="form">
+      <div class="form__wrapper">
+        <div class="form__window">
+          <h3 class="form__title">Напишите нам</h3>
+          <p class="form__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+          <form class="form__subscribe" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="form__input-wrapper">
+              <label class="form__label" for="tel">Имя</label>
+              <input class="form__field" id="name" type="text" pattern="[а-яА-ЯёЁa-zA-Z\s]+" name="name" required>
+            </div>
+            <div class="form__input-wrapper">
+              <label class="form__label" for="tel">Телефон</label>
+              <input class="form__field" id="tel" type="tel" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="13"
+                name="phone" required>
+            </div>
+            <div class="form__input-wrapper" data-validate-type="text">
+              <label class="form__label" for="contact-info">Ваше сообщение</label>
+              <textarea class="form__field form__field--textarea" id="contact-info" name="contact-info"></textarea>
+            </div>
+            <div class="form__input-wrapper">
+              <label class="form__label" for="city">Выберите город</label>
+              <div class="form__dropdown dropdown" tabindex="0">
+                <input class="form__field dropdown__field form__field--dropdown" type="text" id="city" name="city" readonly required>
+                <div class="form__option dropdown__option">
+                  <div class="dropdown__option-text">Санкт-Петербург</div>
+                  <div class="dropdown__option-text">Петрозаводск</div>
+                  <div class="dropdown__option-text">Москва</div>
+                  <div class="dropdown__option-text">Смоленск</div>
+                </div>
+              </div>
+            </div>
+            <label class="form__control">
+              <input class="form__control-input visually-hidden" type="checkbox" name="policy" required>
+              <span class="form__control-mark"></span>
+              <span class="form__control-label">Я согласен на обработку моих персональных<br> данных</span>
+            </label>
+            <button class="form__button button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="main-footer" data-test="footer">
     <div class="main-footer__wrapper">
@@ -850,18 +890,18 @@
         <p class="modal__text">Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
         <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="modal__input-wrapper">
-            <label class="modal__label" for="name">Имя</label>
-            <input class="modal__field" id="name" type="text" pattern="[а-яА-ЯёЁa-zA-Z\s]+" name="name" required>
+            <label class="modal__label" for="name-modal">Имя</label>
+            <input class="modal__field" id="name-modal" type="text" pattern="[а-яА-ЯёЁa-zA-Z\s]+" name="name" required>
           </div>
           <div class="modal__input-wrapper">
-            <label class="modal__label" for="tel">Телефон</label>
-            <input class="modal__field" id="tel" type="tel" pattern="\+?[0-9\s\-\(\)]+" minlength="11" maxlength="13"
-              name="phone" required>
+            <label class="modal__label" for="tel-modal">Телефон</label>
+            <input class="modal__field" id="tel-modal" type="tel" pattern="\+?[0-9\s\-\(\)]+" minlength="11"
+              maxlength="13" name="phone" required>
           </div>
           <div class="modal__input-wrapper">
-            <label class="modal__label" for="city">Выберите город</label>
+            <label class="modal__label" for="city-modal">Выберите город</label>
             <div class="modal__dropdown dropdown" tabindex="0">
-              <input class="modal__field dropdown__field" type="text" id="city" name="city" readonly required>
+              <input class="modal__field dropdown__field" type="text" id="city-modal" name="city" readonly required>
               <div class="dropdown__option">
                 <div class="dropdown__option-text">Санкт-Петербург</div>
                 <div class="dropdown__option-text">Петрозаводск</div>

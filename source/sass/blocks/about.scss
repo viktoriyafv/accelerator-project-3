@@ -171,11 +171,12 @@
 
   @media (min-width: $tablet-width) {
     width: 253px;
+    padding: 16px 20px 15px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 30px;
     width: 484px;
@@ -195,7 +196,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: -21px;
+    top: -23px;
     left: -21px;
     width: 42px;
     height: 42px;
@@ -222,7 +223,7 @@
     font-size: 20px;
     line-height: 22px;
     letter-spacing: 0.2px;
-    margin-bottom: 15px;
+    margin-bottom: 14px
   }
 
   @media (min-width: $desktop-width) {

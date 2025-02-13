@@ -236,8 +236,8 @@
   &::after {
     @include angle-left-down;
 
-    top: 0;
-    right: -16px;
+    top: -1px;
+    right: -13px;
 
     @media (min-width: $tablet-width) {
       right: -20px;
@@ -308,8 +308,8 @@
   &::after {
     @include angle-left-down;
 
-    top: 0;
-    right: -16px;
+    top: -1px;
+    right: -13px;
 
     @media (min-width: $tablet-width) {
       display: none;
@@ -320,9 +320,9 @@
 .hero__button {
   @include reset-link;
 
-  width: 152px;
+  width: 154px;
   min-height: 44px;
-  padding: 14px 59px 14px 19px;
+  padding: 16px 59px 12px 19px;
   background-color: $white-color;
 
   @media (min-width: $tablet-width) {
