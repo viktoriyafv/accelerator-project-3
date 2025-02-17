@@ -11,10 +11,10 @@ const paginationPositionBottom = () => {
     return desktopWidth.matches;
   };
 
-  if(isValid()) {
+  if (isValid()) {
     const elementHeight = currentSlide.clientHeight + 19;
     paginationWrapper.style.bottom = `${elementHeight}px`;
-  } else if (!isValid()){
+  } else if (!isValid()) {
     const elementHeight = currentSlide.clientHeight + 59;
     paginationWrapper.style.bottom = `${elementHeight}px`;
   }
@@ -57,15 +57,13 @@ const getHeroSlider = new Swiper('.hero__swiper', {
     },
   },
   on: {
-    init: function() {
+    init: function () {
       paginationPositionBottom();
     },
-    slideChangeTransitionEnd: function() {
+    slideChangeTransitionEnd: function () {
       paginationPositionBottom();
     }
   },
 });
 
 getHeroSlider.init();
-
-window.addEventListener('resize', paginationPositionBottom);

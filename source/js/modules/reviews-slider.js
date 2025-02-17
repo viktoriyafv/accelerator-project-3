@@ -4,7 +4,6 @@ import '../../sass/vendor/swiper.css';
 
 const getReviewsSlider = new Swiper('.reviews__swiper', {
   direction: 'horizontal',
-  autoHeight: true,
   loop: false,
   slidesPerView: 1,
   spaceBetween: 15,

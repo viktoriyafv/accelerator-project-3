@@ -30,8 +30,10 @@
   }
 }
 
-.dropdown--active .dropdown__option {
-  display: block;
+.dropdown--active {
+  &::before {
+    transform: translateY(-50%) rotate(180deg);
+  }
 }
 
 .dropdown__option {
@@ -42,7 +44,7 @@
   background: $white-color;
   border: 1px solid $primary-text-color;
   overflow: hidden;
-  display: none;
+  display: block;
   z-index: 1;
 }
 

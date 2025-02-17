@@ -24,7 +24,7 @@
 
   min-width: 320px;
   min-height: 568px;
-  padding: 74px 15px 20px;
+  padding: 140px 15px 20px;
   background-color: #d6e2f3;
   background-size: cover;
   background-position: center;
@@ -106,15 +106,6 @@
     @media (width >= 321px) {
       background-image:
         $overlay-photo,
-        image-set(url("../../img/hero-tablet-3@1x.webp") type("image/webp") 1x,
-        url("../../img/hero-tablet-3@2x.webp") type("image/webp") 2x,
-        url("../../img/hero-tablet-3@1x.jpg") type("image/jpeg") 1x,
-        url("../../img/hero-tablet-3@2x.jpg") type("image/jpeg") 2x);
-    }
-
-    @media (width >= 769px) {
-      background-image:
-        $overlay-photo,
         image-set(url("../../img/hero-desktop-3@1x.webp") type("image/webp") 1x,
         url("../../img/hero-desktop-3@2x.webp") type("image/webp") 2x,
         url("../../img/hero-desktop-3@1x.jpg") type("image/jpeg") 1x,
@@ -123,11 +114,27 @@
   }
 }
 
+.hero__pagination-wrapper {
+  min-width: 290px;
+  max-width: 290px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    min-width: 679px;
+    max-width: 679px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1240px;
+    max-width: 1240px;
+  }
+}
+
 .hero__swiper .hero__pagination {
   position: absolute;
   display: flex;
   bottom: 0;
-  left: 15px;
+  left: auto;
   border-radius: 12px 12px 0 0;
   z-index: 2;
   width: 80px;
@@ -145,19 +152,7 @@
   @media (min-width: $tablet-width) {
     width: 100px;
     border-radius: 20px 20px 0 0;
-    left: 45px;
     padding: 14px 20px;
-
-    &::after {
-      right: -20px;
-      width: 20px;
-      height: 20px;
-      background-size: 20px 20px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    left: 100px;
   }
 }
 
@@ -197,11 +192,17 @@
 }
 
 .hero__text-wrapper {
+  max-width: 290px;
+  margin: 0 auto;
   margin-top: auto;
-  margin-right: auto;
 
   @media (min-width: $tablet-width) {
+    max-width: 659px;
     position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 968px;
   }
 }
 

@@ -44,6 +44,7 @@
   position: relative;
   right: 0;
   min-width: 136px;
+  max-width: 290px;
   min-height: 54px;
   padding: 19px 0 19px 20px;
   border-radius: 30px;
@@ -71,7 +72,7 @@
     background-color: $accent-color;
     border-radius: 50px;
 
-    @media (width >= 768px) {
+    @media (min-width: $tablet-width) {
       top: 5px;
       right: 5px;
     }
@@ -92,7 +93,7 @@
     background-color: $white-color;
     z-index: 4;
 
-    @media (width >= 768px) {
+    @media (min-width: $tablet-width) {
       top: 5px;
       right: 5px;
     }
@@ -104,7 +105,7 @@
     background-color: $accent-color;
     color: $white-color;
 
-    @media (width >= 768px) {
+    @media (min-width: $tablet-width) {
       width: 286px;
     }
   }
@@ -159,7 +160,7 @@
   background-color: $accent-color;
   color: $white-color;
 
-  @media (width >= 768px) {
+  @media (min-width: $tablet-width) {
     width: 286px;
   }
 

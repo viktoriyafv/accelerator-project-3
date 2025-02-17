@@ -141,6 +141,7 @@
   &:hover {
     outline: none;
     border: 1px solid $primary-text-color;
+    cursor: text;
   }
 
   &--error {
@@ -232,7 +233,7 @@
   cursor: not-allowed;
 }
 
-.modal__button-submit {
+.modal__button {
   width: 260px;
   background-color: $white-color;
   padding: 14px 67px 14px 29px;

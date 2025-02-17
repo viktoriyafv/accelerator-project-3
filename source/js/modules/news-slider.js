@@ -2,6 +2,29 @@ import Swiper from 'swiper';
 import { Navigation, Pagination, Grid } from 'swiper/modules';
 
 const newsSlides = document.querySelectorAll('.news__item');
+const newsSlider = document.querySelector('.news__swiper');
+
+const swapSlides = () => {
+  const tripsSlide = newsSlider.querySelector('.news__item--trips');
+  const volunteerSlide = newsSlider.querySelector('.news__item--volunteer');
+  const slides = Array.from(newsSlider.querySelectorAll('.news__item'));
+  const tripsIndex = slides.indexOf(tripsSlide);
+  const volunteerIndex = slides.indexOf(volunteerSlide);
+
+  if (window.innerWidth >= 768 && window.innerWidth < 1440) {
+    if (tripsIndex > -1 && volunteerIndex > -1) {
+      newsSlider.querySelector('.swiper-wrapper').insertBefore(volunteerSlide, tripsSlide);
+    }
+  } else {
+    if (tripsIndex > volunteerIndex) {
+      newsSlider.querySelector('.swiper-wrapper').insertBefore(tripsSlide, volunteerSlide);
+    }
+  }
+};
+
+swapSlides();
+
+window.addEventListener('resize', swapSlides);
 
 const setBigSlide = () => {
   const isValid = () => {
@@ -27,6 +50,7 @@ const getNewsSlider = new Swiper('.news__swiper', {
     fill: 'column',
   },
   loop: false,
+  updateOnWindowResize: true,
   navigation: {
     nextEl: '.news__button-swiper--next',
     prevEl: '.news__button-swiper--prev',
@@ -47,10 +71,7 @@ const getNewsSlider = new Swiper('.news__swiper', {
       slidesPerView: 'auto',
       spaceBetween: 32,
       slidesPerGroup: 3,
-      grid: {
-        rows: 1,
-        fill: 'row',
-      },
+      grid: false,
       allowTouchMove: false,
     },
     768: {
@@ -60,7 +81,7 @@ const getNewsSlider = new Swiper('.news__swiper', {
 
       grid: {
         rows: 2,
-        fill: 'row',
+        fill: 'column',
       },
       allowTouchMove: true,
     },
@@ -80,6 +101,10 @@ const getNewsSlider = new Swiper('.news__swiper', {
     },
     slideChangeTransitionEnd: function () {
       setBigSlide();
+    },
+    resize: function () {
+      setBigSlide();
+      getNewsSlider.init();
     },
   },
 });
@@ -128,6 +153,23 @@ const setDynamicPagination = () => {
   });
 };
 
-getNewsSlider.init();
 getNewsSlider.on('slideChange', setDynamicPagination);
-window.addEventListener('resize', setBigSlide);
+
+getNewsSlider.init();
+
+window.addEventListener('resize', getNewsSlider);
+
+function debounce(callback, timeoutDelay = 300) {
+  let timeoutId;
+  return (...rest) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
+  };
+}
+
+const debouncedResizeNewsSlider = debounce(() => {
+  getNewsSlider.init();
+}, 2);
+
+
+window.addEventListener('resize', debouncedResizeNewsSlider);

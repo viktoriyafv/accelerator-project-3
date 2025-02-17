@@ -46,7 +46,7 @@
   }
 }
 
-.reviews__list {
+.reviews__wrapper .reviews__list {
   @include reset-list;
 
   @media (min-width: $tablet-width) {
@@ -56,6 +56,8 @@
 
 .reviews__list .reviews__item {
   width: 290px;
+  min-height: 472px;
+  height: auto;
   border-radius: 16px;
   border: 2px solid $accent-color;
   padding: 30px 15px;
@@ -63,6 +65,7 @@
 
   @media (min-width: $tablet-width) {
     width: 560px;
+    min-height: 417px;
     padding: 50px;
   }
 

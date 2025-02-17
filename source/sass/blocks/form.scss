@@ -16,10 +16,10 @@
   background-image:
     $overlay-photo,
     image-set(url("../../img/form-background-mobile@1x.webp") type("image/webp") 1x,
-      url("../../img/form-background-mobile@2x.webp") type("image/webp") 2x,
-      url("../../img/form-background-mobile@1x.jpg") type("image/jpeg") 1x,
-      url("../../img/form-background-mobile@2x.jpg") type("image/jpeg") 2x);
-  background-size: 320px 753px;
+    url("../../img/form-background-mobile@2x.webp") type("image/webp") 2x,
+    url("../../img/form-background-mobile@1x.jpg") type("image/jpeg") 1x,
+    url("../../img/form-background-mobile@2x.jpg") type("image/jpeg") 2x);
+  background-size: cover;
   padding: 43px 10px 40px;
   margin: 0 auto;
 
@@ -29,10 +29,9 @@
     background-image:
       $overlay-photo,
       image-set(url("../../img/form-background-tablet@1x.webp") type("image/webp") 1x,
-        url("../../img/form-background-tablet@2x.webp") type("image/webp") 2x,
-        url("../../img/form-background-tablet@1x.jpg") type("image/jpeg") 1x,
-        url("../../img/form-background-tablet@2x.jpg") type("image/jpeg") 2x);
-    background-size: 652px 780px;
+      url("../../img/form-background-tablet@2x.webp") type("image/webp") 2x,
+      url("../../img/form-background-tablet@1x.jpg") type("image/jpeg") 1x,
+      url("../../img/form-background-tablet@2x.jpg") type("image/jpeg") 2x);
     border-radius: 16px;
     padding: 0;
   }
@@ -43,10 +42,9 @@
     background-image:
       $overlay-photo,
       image-set(url("../../img/form-background-desktop@1x.webp") type("image/webp") 1x,
-        url("../../img/form-background-desktop@2x.webp") type("image/webp") 2x,
-        url("../../img/form-background-desktop@1x.jpg") type("image/jpeg") 1x,
-        url("../../img/form-background-desktop@2x.jpg") type("image/jpeg") 2x);
-    background-size: 1240px 800px;
+      url("../../img/form-background-desktop@2x.webp") type("image/webp") 2x,
+      url("../../img/form-background-desktop@1x.jpg") type("image/jpeg") 1x,
+      url("../../img/form-background-desktop@2x.jpg") type("image/jpeg") 2x);
   }
 }
 
@@ -149,6 +147,15 @@
   }
 }
 
+.form__label:has(~ .form__field:focus) {
+  opacity: 1;
+}
+
+.form__label:has(~ .form__field:disabled) {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
 .form__field {
   width: 270px;
   height: 50px;
@@ -195,12 +202,12 @@
   &:hover {
     outline: none;
     border: 1px solid $white-color;
+    cursor: text;
   }
 
   &--error {
     border: 1px solid $error-color;
     background: rgba(255, 94, 102, 0.2);
-
   }
 
   &:disabled {
@@ -278,7 +285,7 @@
   }
 }
 
-.form__control-input[type="checkbox"]:checked+.form__control-mark::before {
+.form__control-input[type="checkbox"]:checked + .form__control-mark::before {
   content: "";
   display: block;
   position: absolute;
@@ -293,8 +300,8 @@
   background-color: $accent-color;
 }
 
-.form__control-input[type="checkbox"]:hover+.form__control-mark,
-.form__control-input[type="checkbox"]:focus+.form__control-mark {
+.form__control-input[type="checkbox"]:hover + .form__control-mark,
+.form__control-input[type="checkbox"]:focus + .form__control-mark {
   background-color: $accent-color;
 
   &::after {
@@ -313,7 +320,7 @@
   }
 }
 
-.form__control-input[type="checkbox"]:disabled+.form__control-mark {
+.form__control-input[type="checkbox"]:disabled + .form__control-mark {
   background-color: $disabled-button;
   opacity: 0.5;
   cursor: not-allowed;

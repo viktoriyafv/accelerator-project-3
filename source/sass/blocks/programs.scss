@@ -64,7 +64,8 @@
   justify-content: flex-end;
   align-items: flex-start;
   width: 290px;
-  height: 400px;
+  min-height: 400px;
+  height: auto;
   border-radius: 12px;
   background-color: #d6e2f3;
   background-size: cover;
@@ -73,7 +74,7 @@
 
   @media (min-width: $tablet-width) {
     width: 324px;
-    height: 420px;
+    min-height: 420px;
     padding: 10px 20px;
   }
 
