@@ -175,8 +175,6 @@
     border-radius: 20px;
 
     @media (min-width: $tablet-width) {
-      left: 2px;
-      width: calc(100% + 2px);
       height: 46px;
     }
   }
