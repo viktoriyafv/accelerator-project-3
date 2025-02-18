@@ -130,7 +130,9 @@
 }
 
 .faq__item:focus .faq__list-button,
-.faq__item:hover .faq__list-button {
+.faq__item:hover .faq__list-button,
+.faq__list-button:focus,
+.faq__list-button:hover {
   border: 1px solid $accent-color;
   outline: none;
   background-color: $white-color;
@@ -140,7 +142,8 @@
   }
 }
 
-.faq__item:active .faq__list-button {
+.faq__item:active .faq__list-button,
+.faq__list-button:active {
   border: 1px solid $accent-color;
   outline: none;
   background-color: $active-button;

@@ -76,6 +76,8 @@ const formModal = document.querySelector('#form-modal');
 const inputPhone = formModal.querySelector('#tel-modal');
 const inputName = formModal.querySelector('#name-modal');
 const inputSelect = formModal.querySelector('#city-modal');
+const inputPolicy = formModal.querySelector('input[name="policy"]');
+const inputCheckbox = formModal.querySelector('.modal__control-mark');
 const submitFormModal = formModal.querySelector('.modal__button');
 
 submitFormModal.addEventListener('click', (evt) => {
@@ -99,7 +101,13 @@ submitFormModal.addEventListener('click', (evt) => {
     inputSelect.classList.remove('modal__field--error');
   }
 
-  if (inputName.validity.valid && inputPhone.validity.valid && inputSelect.value !== '') {
+  if (!inputPolicy.checked) {
+    inputCheckbox.classList.add('form__control-mark--error');
+  } else {
+    inputCheckbox.classList.remove('form__control-mark--error');
+  }
+
+  if (inputName.validity.valid && inputPhone.validity.valid && inputSelect.value !== '' && inputPolicy.checked) {
     formModal.submit();
     formModal.reset();
   }
@@ -111,6 +119,10 @@ function validateModalRestart() {
       modalInput[i].classList.remove('modal__field--error');
     });
   }
+
+  inputPolicy.addEventListener('input', () => {
+    inputCheckbox.classList.remove('modal__control-mark--error');
+  });
 }
 
 validateModalRestart();

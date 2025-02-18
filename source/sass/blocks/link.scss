@@ -1,4 +1,4 @@
-.button-item {
+.link {
   @include reset-link;
 
   position: relative;
@@ -55,21 +55,15 @@
 }
 
 
-.button-item--disabled {
+.link--disabled,
+.link--disabled:hover,
+.link--disabled:active,
+.link--disabled:focus {
   background-color: $disabled-button;
   cursor: not-allowed;
 
   &::after {
     background-color: rgba(255, 255, 255, 0.6);
-  }
-}
-
-.button-item--disabled:hover {
-  background-color: $disabled-button;
-  cursor: not-allowed;
-
-  &::after {
-    background-color: rgba(255, 255, 255, 0.6);
-    transform: translateY(-50%);
+    transform: rotate(0);
   }
 }

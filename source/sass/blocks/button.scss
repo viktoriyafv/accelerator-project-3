@@ -125,3 +125,22 @@
     }
   }
 }
+
+.button--disabled,
+.button--disabled:hover,
+.button--disabled:focus,
+.button--disabled:active {
+  border: 1px solid $disabled-button;
+  background-color: inherit;
+  color: $disabled-button;
+  cursor: not-allowed;
+
+  &::after {
+    background-color: $white-color;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    background-color: $disabled-button;
+  }
+}

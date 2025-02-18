@@ -175,6 +175,20 @@
   cursor: pointer;
 }
 
+.modal__control-mark--error {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid $error-color;
+    background: rgba(255, 94, 102, 0.2);
+  }
+}
+
 .modal__control-label {
   display: block;
   font-size: 12px;

@@ -138,11 +138,16 @@
 
   &:disabled {
     border: 1px solid $disabled-button;
+    background-color: $white-color;
     color: $disabled-button;
     cursor: not-allowed;
 
     &::after {
       background-color: $disabled-button;
+    }
+
+    &::before {
+      background-color: $white-color;
     }
   }
 }
