@@ -10,14 +10,15 @@ const inputCheckbox = form.querySelector('.form__control-mark');
 const submitForm = form.querySelector('.form__button');
 const formInput = form.querySelectorAll('.form__field');
 
-inputSelect.addEventListener('focus', (event) => {
-  event.preventDefault();
+inputSelect.addEventListener('focus', (evt) => {
+  evt.preventDefault();
 
   selectOption();
   inputSelect.classList.remove('form__field--error');
 });
 
 submitForm.addEventListener('click', (evt) => {
+  inputSelect.removeAttribute('readonly');
 
   if (!inputName.validity.valid) {
     inputName.classList.add('form__field--error');
@@ -48,12 +49,13 @@ submitForm.addEventListener('click', (evt) => {
   }
 
   if (inputSelect.value === '') {
-    inputSelect.classList.add('form__field--error');
+    form.querySelector('.form__select').classList.add('select--error');
+    inputSelect.setCustomValidity('Заполните это поле');
 
     return;
   } else {
-    inputSelect.classList.remove('form__field--error');
-    inputMessage.setCustomValidity('');
+    form.querySelector('.form__select').classList.remove('select--error');
+    inputSelect.setCustomValidity('');
   }
 
   if (!inputPolicy.checked) {
@@ -69,17 +71,23 @@ submitForm.addEventListener('click', (evt) => {
     form.submit();
 
     evt.preventDefault();
-    document.getElementByClass('form__subscribe').reset();
+    form.reset();
   }
-
 });
 
 function validateRestart() {
   for (let i = 0; i < formInput.length; i++) {
     formInput[i].addEventListener('input', () => {
       formInput[i].classList.remove('form__field--error');
+      formInput[i].setCustomValidity('');
     });
   }
+
+  inputSelect.addEventListener('click', () => {
+    form.querySelector('.form__select').classList.remove('select--error');
+    inputSelect.setCustomValidity('');
+    inputSelect.setAttribute('readonly', 'true');
+  });
 
   inputPolicy.addEventListener('input', () => {
     inputCheckbox.classList.remove('form__control-mark--error');

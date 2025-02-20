@@ -8,6 +8,7 @@ const submitFormModal = formModal.querySelector('.modal__button');
 const modalInput = document.querySelectorAll('.modal__field');
 
 submitFormModal.addEventListener('click', (evt) => {
+  inputSelect.removeAttribute('readonly');
 
   if (!inputName.validity.valid) {
     inputName.classList.add('modal__field--error');
@@ -28,13 +29,13 @@ submitFormModal.addEventListener('click', (evt) => {
   }
 
   if (inputSelect.value === '') {
-    inputSelect.classList.add('modal__field--error');
-
-    evt.preventDefault();
+    formModal.querySelector('.modal__select').classList.add('select--error');
+    inputSelect.setCustomValidity('Заполните это поле');
 
     return;
   } else {
-    inputSelect.classList.remove('modal__field--error');
+    formModal.querySelector('.modal__select').classList.remove('select--error');
+    inputSelect.setCustomValidity('');
   }
 
   if (!inputPolicy.checked) {
@@ -48,6 +49,8 @@ submitFormModal.addEventListener('click', (evt) => {
 
   if (inputName.validity.valid && inputPhone.validity.valid && inputSelect.value !== '' && inputPolicy.checked) {
     formModal.submit();
+
+    evt.preventDefault();
     formModal.reset();
   }
 });
@@ -58,6 +61,12 @@ function validateModalRestart() {
       modalInput[i].classList.remove('modal__field--error');
     });
   }
+
+  inputSelect.addEventListener('click', () => {
+    formModal.querySelector('.modal__select').classList.remove('select--error');
+    inputSelect.setCustomValidity('');
+    inputSelect.setAttribute('readonly', 'true');
+  });
 
   inputPolicy.addEventListener('input', () => {
     inputCheckbox.classList.remove('modal__control-mark--error');

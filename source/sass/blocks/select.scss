@@ -21,6 +21,20 @@
   }
 }
 
+.select--error .modal__field,
+.select--error .modal__field:focus,
+.select--error .modal__field:active,
+.select--error.modal__field:hover,
+.select--error .form__field,
+.select--error .form__field:focus,
+.select--error.form__field:active,
+.select--error.form__field:hover {
+  border-radius: 8px;
+  border: 1px solid $error-color;
+  background: rgba(255, 94, 102, 0.2);
+  z-index: 2;
+}
+
 .select:focus-within,
 .select:active {
   outline: none;
