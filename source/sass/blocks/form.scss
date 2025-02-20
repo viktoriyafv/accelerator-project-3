@@ -206,7 +206,10 @@
     cursor: text;
   }
 
-  &--error {
+  &--error,
+  &--error:focus,
+  &--error:active,
+  &--error:hover {
     border: 1px solid $error-color;
     background: rgba(255, 94, 102, 0.2);
   }

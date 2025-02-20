@@ -67,6 +67,10 @@ submitForm.addEventListener('click', (evt) => {
     inputPolicy.setCustomValidity('');
   }
 
+  if (!inputName.validity.valid && !inputPhone.validity.valid && inputSelect.value === '' && !inputPolicy.checked) {
+    inputSelect.setAttribute('readonly', 'true');
+  }
+
   if (inputName.validity.valid && inputPhone.validity.valid && !inputSelect.value === '' && inputPolicy.checked) {
     form.submit();
 
