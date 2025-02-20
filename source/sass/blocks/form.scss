@@ -13,6 +13,7 @@
 .form__wrapper {
   width: 320px;
   min-height: 753px;
+  background-color: $background-color-img;
   background-image:
     $overlay-photo,
     image-set(url("../../img/form-background-mobile@1x.webp") type("image/webp") 1x,

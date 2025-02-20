@@ -25,7 +25,7 @@
   min-width: 320px;
   min-height: 568px;
   padding: 140px 15px 20px;
-  background-color: #d6e2f3;
+  background-color: $background-color-img;
   background-size: cover;
   background-position: center;
 
@@ -120,8 +120,8 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    min-width: 679px;
-    max-width: 679px;
+    min-width: 678px;
+    max-width: 678px;
   }
 
   @media (min-width: $desktop-width) {
