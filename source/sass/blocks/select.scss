@@ -29,10 +29,10 @@
 .select--error .form__field:focus,
 .select--error .form__field:active,
 .select--error .form__field:hover {
- color: rgb(255, 255, 255, 0);
- border-radius: 8px;
- border: 1px solid $error-color;
- background: rgba(255, 94, 102, 0.2);
+  color: rgb(255, 255, 255, 0);
+  border-radius: 8px;
+  border: 1px solid $error-color;
+  background: rgba(255, 94, 102, 0.2);
 }
 
 .select:focus-within,
