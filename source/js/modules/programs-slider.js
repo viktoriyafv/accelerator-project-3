@@ -21,6 +21,7 @@ const getProgramsSlider = new Swiper('.programs__swiper', {
   wrapperClass: 'programs__list',
   breakpoints: {
     320: {
+      allowTouchMove: true,
       scrollbar: {
         enabled: false,
       }

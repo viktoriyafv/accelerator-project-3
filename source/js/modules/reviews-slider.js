@@ -21,12 +21,14 @@ const getReviewsSlider = new Swiper('.reviews__swiper', {
   wrapperClass: 'reviews__list',
   breakpoints: {
     320: {
+      allowTouchMove: true,
       scrollbar: {
         enabled: false,
       }
     },
     768: {
       slidesPerView: 'auto',
+      allowTouchMove: true,
       spaceBetween: 30,
       scrollbar: {
         dragSize: 324,
@@ -35,6 +37,7 @@ const getReviewsSlider = new Swiper('.reviews__swiper', {
     1440: {
       slidesPerView: 2,
       spaceBetween: 32,
+      allowTouchMove: false,
     },
   },
 });
