@@ -50,6 +50,19 @@ function subLinkTabindexAdd() {
   }
 }
 
+function subLinkTabindexRemove() {
+  const subListIsClose = document.querySelectorAll('.main-header__item');
+
+  for (let i = 0; i < subListIsClose.length; i++) {
+
+    const sublinkActive = document.querySelectorAll('.main-header__sublink');
+
+    for (let j = 0; j < sublinkActive.length; j++) {
+      sublinkActive[j].tabIndex = -1;
+    }
+  }
+}
+
 const navLinkToggle = () => {
   for (let i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener('click', () => {
@@ -62,14 +75,22 @@ const navLinkToggle = () => {
 
     sublistButton[i].addEventListener('click', () => {
       sublistButton[i].parentElement.classList.toggle('main-header__item--active');
-      subLinkTabindexAdd();
+      if (sublistButton[i].parentElement.classList.contains('main-header__item--active')) {
+        subLinkTabindexAdd();
+      } else {
+        subLinkTabindexRemove();
+      }
     });
 
     sublistButton[i].addEventListener('keydown', (evt) => {
 
       if (isEnterKey(evt)) {
         sublistButton[i].parentElement.classList.toggle('main-header__item--active');
-        subLinkTabindexAdd();
+        if (sublistButton[i].parentElement.classList.contains('main-header__item--active')) {
+          subLinkTabindexAdd();
+        } else {
+          subLinkTabindexRemove();
+        }
       }
     });
   }
