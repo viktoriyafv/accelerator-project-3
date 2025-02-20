@@ -34,9 +34,18 @@ for (let i = 0; i < inputPhone.length; i++) {
     });
   };
   inputPhone[i].addEventListener('input', initPhoneInput);
-  inputPhone[i].addEventListener('focus', () => {
+
+
+  inputPhone[i].onfocus = function () {
     if (inputPhone[i].value === '') {
       inputPhone[i].value = '+7';
     }
-  });
+  };
+
+  inputPhone[i].onblur = function () {
+
+    if (inputPhone[i].value === '+7') {
+      inputPhone[i].value = '';
+    }
+  };
 }

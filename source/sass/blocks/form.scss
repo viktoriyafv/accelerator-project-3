@@ -185,7 +185,7 @@
     }
   }
 
-  &--dropdown {
+  &--select {
     width: 260px;
     height: 52px;
 
@@ -218,7 +218,7 @@
   }
 }
 
-.form__dropdown {
+.form__select {
   width: 260px;
   height: 52px;
 
@@ -235,7 +235,7 @@
   }
 }
 
-.form__dropdown .dropdown__option {
+.form__select .select__option {
   top: 56px;
   border: none;
 }
