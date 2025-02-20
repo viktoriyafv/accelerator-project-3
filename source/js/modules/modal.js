@@ -1,4 +1,4 @@
-import { selectOption } from './dropdown.js';
+import { selectOption } from './select.js';
 
 const modalWindow = document.querySelector('.modal');
 const body = document.querySelector('.page-body');
@@ -81,30 +81,42 @@ const inputCheckbox = formModal.querySelector('.modal__control-mark');
 const submitFormModal = formModal.querySelector('.modal__button');
 
 submitFormModal.addEventListener('click', (evt) => {
-  evt.preventDefault();
 
   if (!inputName.validity.valid) {
     inputName.classList.add('modal__field--error');
+
+    return;
   } else {
     inputName.classList.remove('modal__field--error');
+    inputName.setCustomValidity('');
   }
 
   if (!inputPhone.validity.valid) {
     inputPhone.classList.add('modal__field--error');
+
+    return;
   } else {
     inputPhone.classList.remove('modal__field--error');
+    inputPhone.setCustomValidity('');
   }
 
   if (inputSelect.value === '') {
     inputSelect.classList.add('modal__field--error');
+
+    evt.preventDefault();
+
+    return;
   } else {
     inputSelect.classList.remove('modal__field--error');
   }
 
   if (!inputPolicy.checked) {
     inputCheckbox.classList.add('form__control-mark--error');
+
+    return;
   } else {
     inputCheckbox.classList.remove('form__control-mark--error');
+    inputPolicy.setCustomValidity('');
   }
 
   if (inputName.validity.valid && inputPhone.validity.valid && inputSelect.value !== '' && inputPolicy.checked) {
@@ -115,7 +127,7 @@ submitFormModal.addEventListener('click', (evt) => {
 
 function validateModalRestart() {
   for (let i = 0; i < modalInput.length; i++) {
-    modalInput[i].addEventListener('focus', () => {
+    modalInput[i].addEventListener('input', () => {
       modalInput[i].classList.remove('modal__field--error');
     });
   }

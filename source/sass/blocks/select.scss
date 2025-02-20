@@ -1,4 +1,4 @@
-.dropdown {
+.select {
   position: relative;
   height: 44px;
   padding: 0;
@@ -21,8 +21,8 @@
   }
 }
 
-.dropdown:focus-within,
-.dropdown:active {
+.select:focus-within,
+.select:active {
   outline: none;
 
   &::before {
@@ -30,13 +30,13 @@
   }
 }
 
-.dropdown--active {
+.select--active {
   &::before {
     transform: translateY(-50%) rotate(180deg);
   }
 }
 
-.dropdown__option {
+.select__option {
   position: absolute;
   top: 48px;
   width: 100%;
@@ -48,7 +48,7 @@
   z-index: 1;
 }
 
-.dropdown__option-text {
+.select__option-text {
   font-size: 14px;
   line-height: 14px;
   text-align: left;

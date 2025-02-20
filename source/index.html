@@ -277,7 +277,7 @@
               <source width="290" height="200" type="image/webp"
                 srcset="img/grant-mobile@1x.webp 1x, img/grant-mobile@2x.webp 2x">
               <img class="grant__picture" src="img//grant-mobile@1x.jpg" width="290" height="200"
-                srcset="img/grant-mobile@2x.jpg 2x" alt="Адрес на карте" loading="lazy">
+                srcset="img/grant-mobile@2x.jpg 2x" alt="Наш Адрес на карте" loading="lazy">
             </picture>
           </div>
         </div>
@@ -792,14 +792,14 @@
             </div>
             <div class="form__input-wrapper">
               <label class="form__label" for="city">Выберите город</label>
-              <div class="form__dropdown dropdown" tabindex="0">
-                <input class="form__field dropdown__field form__field--dropdown" type="text" id="city" name="city"
+              <div class="form__select select" tabindex="0">
+                <input class="form__field select__field form__field--select" type="text" id="city" name="city"
                   readonly required>
-                <div class="form__option dropdown__option visually-hidden">
-                  <div class="dropdown__option-text">Санкт-Петербург</div>
-                  <div class="dropdown__option-text">Петрозаводск</div>
-                  <div class="dropdown__option-text">Москва</div>
-                  <div class="dropdown__option-text">Смоленск</div>
+                <div class="form__option select__option visually-hidden">
+                  <div class="select__option-text">Санкт-Петербург</div>
+                  <div class="select__option-text">Петрозаводск</div>
+                  <div class="select__option-text">Москва</div>
+                  <div class="select__option-text">Смоленск</div>
                 </div>
               </div>
             </div>
@@ -893,26 +893,27 @@
         <form class="modal__form" action="https://echo.htmlacademy.ru" method="post" id="form-modal">
           <div class="modal__input-wrapper">
             <label class="modal__label" for="name-modal">Имя</label>
-            <input class="modal__field" id="name-modal" type="text" pattern="[а-яА-ЯёЁa-zA-Z\s]+" name="name" required>
+            <input class="modal__field" id="name-modal" type="text" pattern="[а-яА-ЯёЁa-zA-Z\s]+" name="name" autocomplete="off" required>
           </div>
           <div class="modal__input-wrapper">
             <label class="modal__label" for="tel-modal">Телефон</label>
-            <input class="modal__field" id="tel-modal" type="tel" pattern="[+][7][\d \(\)\-]{10,16}" name="phone" required>
+            <input class="modal__field" id="tel-modal" type="tel" pattern="[+][7][\d \(\)\-]{10,16}" autocomplete="off" name="phone" required>
           </div>
           <div class="modal__input-wrapper">
             <label class="modal__label" for="city-modal">Выберите город</label>
-            <div class="modal__dropdown dropdown" tabindex="0">
-              <input class="modal__field dropdown__field" type="text" id="city-modal" name="city" readonly required>
-              <div class="dropdown__option visually-hidden">
-                <div class="dropdown__option-text">Санкт-Петербург</div>
-                <div class="dropdown__option-text">Петрозаводск</div>
-                <div class="dropdown__option-text">Москва</div>
-                <div class="dropdown__option-text">Смоленск</div>
+            <div class="modal__select select" tabindex="0">
+              <input class="modal__field select__field" type="text" id="city-modal" name="city" autocomplete="off" readonly required>
+              <div class="select__option visually-hidden">
+                <div class="select__option-text">Санкт-Петербург</div>
+                <div class="select__option-text">Петрозаводск</div>
+                <div class="select__option-text">Москва</div>
+                <div class="select__option-text">Смоленск</div>
               </div>
             </div>
           </div>
           <label class="modal__control">
-            <input class="modal__control-input visually-hidden" type="checkbox" name="policy" required>
+            <input class="modal__control-input visually-hidden" type="checkbox" name="policy"
+            required>
             <span class="modal__control-mark"></span>
             <span class="modal__control-label">Я согласен на обработку моих персональных данных</span>
           </label>
