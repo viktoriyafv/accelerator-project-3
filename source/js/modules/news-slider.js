@@ -104,7 +104,6 @@ const getNewsSlider = new Swiper('.news__swiper', {
     },
     resize: function () {
       setBigSlide();
-      getNewsSlider.init();
     },
   },
 });
@@ -127,16 +126,13 @@ const setDynamicPagination = () => {
 
   if (window.innerWidth >= 1440) {
     slidesPerViewCount = 3;
-    activeIndex = getNewsSlider.activeIndex / 3;
+    activeIndex = Math.ceil(getNewsSlider.activeIndex / 3);
   }
 
   const lastSlideIndex = Math.ceil(getNewsSlider.slides.length / slidesPerViewCount);
   const paginationBullets = getNewsSlider.pagination.bullets;
 
-  if (activeIndex > 0 && activeIndex <= 2) {
-    startPaginationIndex = 0;
-    endPaginationIndex = 3;
-  } if (activeIndex >= 3) {
+  if (activeIndex >= 3) {
     startPaginationIndex = activeIndex - 2;
     endPaginationIndex = activeIndex + 2;
   } if (activeIndex === lastSlideIndex - 1) {
@@ -154,10 +150,9 @@ const setDynamicPagination = () => {
 };
 
 getNewsSlider.on('slideChange', setDynamicPagination);
+getNewsSlider.on('resize', setDynamicPagination);
 
 getNewsSlider.init();
-
-window.addEventListener('resize', getNewsSlider);
 
 function debounce(callback, timeoutDelay = 300) {
   let timeoutId;
@@ -172,4 +167,6 @@ const debouncedResizeNewsSlider = debounce(() => {
 }, 2);
 
 
+window.addEventListener('load', debouncedResizeNewsSlider);
 window.addEventListener('resize', debouncedResizeNewsSlider);
+window.addEventListener('resize', setDynamicPagination);
