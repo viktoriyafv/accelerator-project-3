@@ -7,7 +7,7 @@ const inputCheckbox = formModal.querySelector('.modal__control-mark');
 const submitFormModal = formModal.querySelector('.modal__button');
 const modalInput = document.querySelectorAll('.modal__field');
 
-submitFormModal.addEventListener('click', (evt) => {
+submitFormModal.addEventListener('click', () => {
   inputSelect.removeAttribute('readonly');
 
   if (!inputName.validity.valid) {
@@ -50,7 +50,6 @@ submitFormModal.addEventListener('click', (evt) => {
   if (inputName.validity.valid && inputPhone.validity.valid && inputSelect.value !== '' && inputPolicy.checked) {
     formModal.submit();
 
-    evt.preventDefault();
     formModal.reset();
   }
 });
