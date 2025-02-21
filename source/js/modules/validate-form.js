@@ -17,7 +17,7 @@ inputSelect.addEventListener('focus', (evt) => {
   inputSelect.classList.remove('form__field--error');
 });
 
-submitForm.addEventListener('click', (evt) => {
+submitForm.addEventListener('click', () => {
   inputSelect.removeAttribute('readonly');
 
   if (!inputName.validity.valid) {
@@ -74,7 +74,6 @@ submitForm.addEventListener('click', (evt) => {
   if (inputName.validity.valid && inputPhone.validity.valid && !inputSelect.value === '' && inputPolicy.checked) {
     form.submit();
 
-    evt.preventDefault();
     form.reset();
   }
 });
